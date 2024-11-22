@@ -1,0 +1,113 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Ensures space between the logo, nav links, and profile */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.logo img {
+  width: 170px;
+  height: auto;
+}
+
+.pages {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center; /* Centers the nav links */
+  flex: 1; /* Pushes the links to take up the space between logo and profile */
+}
+
+.pages a {
+  text-decoration: none;
+  color: rgb(105, 104, 104);
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.pages a:hover {
+  color: rgb(28, 31, 246);
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  margin-left: 400px;
+  border-radius: 50%;
+}
+
+.profileDetails {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  z-index: 100;
+}
+
+.profileDetails p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.profileDetails button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profileDetails button:hover {
+  background-color: #0056b3;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pages {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .pages.showMenu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

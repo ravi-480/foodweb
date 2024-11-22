@@ -1,0 +1,133 @@
+input {
+  padding: 8px 25px;
+  font-size: 17px;
+  border-radius: 13px;
+  outline: none;
+  border: 1px solid rgb(105, 104, 104);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.484);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 50px;
+  padding: 20px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 7px 9px 8px rgba(1, 1, 76, 0.2);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.recipe-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(1, 1, 80, 1);
+  text-overflow: ellipsis;
+}
+
+.recipe-card span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: rgba(3, 3, 187, 0.626);
+}
+
+.recipe-info {
+  padding-left: 10px; 
+}
+
+.recipe-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: rgb(28, 31, 246);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.recipe-card a:hover {
+  background-color: rgb(8, 11, 206);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.No-detail {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #6b6969;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .recipe-card span {
+    display: none;
+  }
+
+  .recipe-list {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 30px;
+  }
+
+  .recipe-card h3 {
+    font-size: 1rem;
+  }
+
+  .recipe-card a {
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recipe-list {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .recipe-card h3 {
+    font-size: 0.9rem;
+  }
+
+  form input[type="text"] {
+    width: 200px;
+  }
+}
