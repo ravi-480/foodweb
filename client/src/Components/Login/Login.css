@@ -1,46 +1,85 @@
-.login-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .login-form{
-     background-color: rgb(121, 184, 239);
-     width: 30%;
-     border-radius: 15px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     padding: 30px;
-     margin: 10px;
-  }
-  
-  .login-form input {
-     margin: 15px;
-     border: none;
-     outline: none;
-  }
-  .login-form button{
-     background-color: rgb(85, 87, 244) !important;
-     box-shadow: none;
-     color: whitesmoke;
-     border: none;
-     margin-top: 30px;
-  }
-   .login-form p{
-     color: rgba(4, 4, 83);
-  }
-  .login-form button{
-    padding: 10px 30px;
-    border-radius: 10px;
-  }
-  .login-form button:hover{
-     background-color: rgb(45, 48, 214) !important;
-     transition: all .3s ;
-     cursor: pointer;
-  }
-  
-  .error-message{
-    color: red;
-  }
+/* Main container */
+.login-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 20px; /* Add padding for spacing */
+   background-color: #f5f5f5; /* Optional background color for better contrast */
+ }
+ 
+ /* Login form styling */
+ .login-form {
+   background-color: rgb(121, 184, 239);
+   width: 100%; /* Take full width of parent */
+   max-width: 400px; /* Limit max width for larger screens */
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column; /* Stack children vertically */
+   align-items: center;
+   padding: 30px; /* Ensure proper spacing inside the form */
+   margin: 20px auto; /* Center the form on the page */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+   box-sizing: border-box; /* Prevent padding overflow issues */
+ }
+ 
+ /* Input field styling */
+ .login-form input {
+   margin: 15px 0;
+   border: 1px solid #ccc; /* Add border for better visibility */
+   outline: none;
+   padding: 10px; /* Ensure sufficient spacing inside inputs */
+   width: 100%; /* Make input span full width of form */
+   border-radius: 8px; /* Rounded corners */
+   font-size: 16px; /* Consistent font size */
+   box-sizing: border-box; /* Prevent overflow due to padding */
+ }
+ 
+ /* Button styling */
+ .login-form button {
+   background-color: rgb(85, 87, 244);
+   color: whitesmoke;
+   border: none;
+   padding: 10px 30px;
+   border-radius: 10px;
+   margin-top: 20px;
+   cursor: pointer;
+   font-size: 16px; /* Consistent font size */
+ }
+ 
+ .login-form button:hover {
+   background-color: rgb(45, 48, 214);
+   transition: all 0.3s;
+ }
+ 
+ /* Paragraph link styling */
+ .login-form p {
+   color: rgba(4, 4, 83);
+   font-size: 14px;
+   margin-top: 15px;
+ }
+ 
+ .login-form p a {
+   color: #0000ee; /* Ensure link is visible */
+   text-decoration: underline;
+ }
+ 
+ /* Error message styling */
+ .error-message {
+   color: red;
+ }
+ 
+ /* Responsive breakpoints */
+ @media (max-width: 768px) {
+   .login-form {
+     width: 90%; /* Take up most of the screen width */
+     padding: 20px;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .login-form {
+     width: 95%;
+   }
+ }
+ 
