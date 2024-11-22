@@ -26,6 +26,9 @@
    box-shadow: none;
    color: whitesmoke;
    border: none;
+   padding: 10px 30px;
+   border-radius: 10px;
+   cursor: pointer;
    margin-top: 30px;
 }
  .register-form p{

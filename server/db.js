@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://localhost:27017/recipe-user")
+  .connect("mongodb+srv://kumawatravi9426:HtMByy6zAcGRvAhQ@cluster0.hiscg.mongodb.net/recipe-user")
   .then(() => {
     console.log("connected to db");
   })

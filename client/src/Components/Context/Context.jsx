@@ -21,7 +21,6 @@ export default function GlobalState({ children }) {
 
       if (data?.data?.recipes) {
         setRecipeList(data.data.recipes);
-        console.log(recipeList);
         setLoading(false);
       }
     } catch (error) {

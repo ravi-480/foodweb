@@ -24,7 +24,6 @@ const Registration = () => {
         "http://localhost:5000/api/user/adduser",
         userData
       );
-      console.log(res);
       navigate("/login");
     } catch (error) {
       // Check if the error response indicates an existing user

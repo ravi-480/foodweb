@@ -4,16 +4,24 @@ const app = express();
 const bodyparser = require("body-parser");
 const cors = require("cors");
 const dbjs = require("./db");
-const port = process.env.PORT || 5000;
+const port = 5000;
+const path = require("path");
+
 const userRoute = require("./routes/userapi");
+
+const _dirname = path.resolve();
 
 app.use(bodyparser.json());
 app.use(cors());
 app.use("/api/user", userRoute);
-app.listen(port, () => {
-  console.log("server is running");
+
+
+
+app.use(express.static(path.join(_dirname, "/client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(_dirname, "client", "build", "index.html"));
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello");
+app.listen(port, () => {
+  console.log("server is running");
 });

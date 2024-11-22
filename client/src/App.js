@@ -28,7 +28,6 @@ function App() {
           localStorage.removeItem("token");
           localStorage.removeItem("uname");
         }
-        console.log(res);
       } catch (error) {
         console.log(error);
       }
