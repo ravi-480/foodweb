@@ -12,6 +12,7 @@ import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Registration from "./Components/Registration/Registration";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -92,6 +93,7 @@ function App() {
               }
             />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </GlobalState>
